@@ -12,7 +12,7 @@ import static ru.javawebinar.topjava.model.BaseEntity.START_SEQ;
 
 public class MealTestData {
 
-    public static final ModelMatcher<Meal> MATCHER = new ModelMatcher<>();
+    public static final ModelMatcher<Meal> MATCHER = ModelMatcher.of(Meal.class);
 
     public static Meal getCreated() {
         return new Meal(null, of(2015, Month.JUNE, 1, 18, 0), "Созданный ужин", 300);
